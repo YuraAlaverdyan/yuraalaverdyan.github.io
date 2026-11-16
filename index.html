@@ -1,58 +1,182 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Pocket Plum Games</title>
-    <style>
-      body { margin: 0; min-height: 100vh; display: grid; place-items: center; font-family: system-ui, sans-serif;
-        color: #4a2d7a; background: linear-gradient(160deg, #d9ceff, #ffd6ea 70%, #ffe9c4); }
-      main { text-align: center; padding: 32px 16px; max-width: 560px; }
-      h1 { margin: 0 0 6px; font-size: 34px; }
-      p { margin: 8px 0; font-size: 17px; line-height: 1.5; }
-      a { color: #7a3bd1; }
-      ul { list-style: none; margin: 26px 0; padding: 0; display: grid; gap: 14px; }
-      li { display: flex; align-items: center; gap: 14px; text-align: left; padding: 12px;
-        background: rgba(255, 255, 255, 0.6); border-radius: 20px; }
-      li img { width: 72px; height: 72px; flex: none; border-radius: 18px; box-shadow: 0 6px 14px rgba(74, 45, 122, 0.22); }
-      li p { margin: 2px 0; font-size: 16px; }
-    </style>
-  </head>
-  <body>
-    <main>
-      <h1>Pocket Plum Games</h1>
-      <p>We make small, friendly mobile games for Android.</p>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pocket Plum Games: small games, kept close</title>
+<meta name="description" content="Pocket Plum Games makes free puzzle and arcade games for Android that play in one hand, a few minutes at a time: Jarlings, Parcelings, Leashlings and Snoozlings.">
+<meta name="theme-color" content="#080C1F">
+<link rel="canonical" href="https://yuraalaverdyan.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pocket Plum Games">
+<meta property="og:title" content="Pocket Plum Games: small games, kept close">
+<meta property="og:description" content="Pocket Plum Games makes free puzzle and arcade games for Android that play in one hand, a few minutes at a time: Jarlings, Parcelings, Leashlings and Snoozlings.">
+<meta property="og:url" content="https://yuraalaverdyan.github.io/">
+<meta property="og:image" content="https://yuraalaverdyan.github.io/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/instrument-serif-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+<script>document.documentElement.className='js';setTimeout(function(){document.documentElement.classList.add('ready')},4500)</script>
+<script type="module" src="assets/site.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="loader" aria-hidden="true"><div><img src="assets/brand/mark-dark.svg" width="72" height="72" alt=""><i></i></div></div>
+<div class="glow" aria-hidden="true"></div>
+<canvas id="world" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="thread" aria-hidden="true"><i></i><b></b></div>
+<div class="cursor" aria-hidden="true"></div>
+<header class="site-header">
+  <a class="brand" href="./" aria-label="Pocket Plum Games, home">
+    <img src="assets/brand/lockup-dark.svg" width="179" height="40" alt="">
+  </a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="#games">Games</a>
+    <a class="wide" href="#next">What's next</a>
+    <a class="gold" href="mailto:yuraalaverdyan@gmail.com">Contact</a>
+  </nav>
+</header>
+<main id="main">
+  <section class="stage hero" data-station="pocket" data-side="hero" data-mside="mhero" data-glow="#2F4FB0">
+    <h1 class="mega"><span class="line"><span>Small games,</span></span> <span class="line"><span><em>kept close.</em></span></span></h1>
+    <img class="art" src="assets/brand/mark-dark.svg" width="240" height="240" alt="">
+    <div class="hero-foot">
+      <p class="lead">Pocket Plum Games is an independent studio making free puzzle and arcade games for Android. Four are on their way to Google Play.</p>
+      <div class="cta">
+        <a class="pill solid magnet" href="#games">Meet the games<i aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h12M9 3l5 5-5 5"/></svg></i></a>
+        <span class="status">Coming soon to Google Play</span>
+      </div>
+    </div>
+    <p class="scroll-hint" aria-hidden="true">Scroll</p>
+  </section>
+  <section class="stage statement" data-station="pocket" data-side="sink" data-mside="msink" data-glow="#3A2A7A" aria-label="About the studio">
+    <p class="big"><span class="w">We</span> <span class="w">make</span> <span class="w">small</span> <span class="w">games</span> <span class="w">and</span> <span class="w">we</span> <span class="w">finish</span> <span class="w">them</span> <span class="w">properly.</span> <span class="w">One</span> <span class="w">thumb,</span> <span class="w">a</span> <span class="w">few</span> <span class="w">minutes,</span> <span class="w">no</span> <span class="w">connection</span> <span class="w">needed.</span> <span class="w">Characters</span> <span class="w">that</span> <span class="w">blink,</span> <span class="w">sulk</span> <span class="w">and</span> <span class="w">cheer,</span> <em class="w">tucked</em> <em class="w">into</em> <em class="w">your</em> <em class="w">pocket.</em></p>
+  </section>
+  <div class="opaque marquee" aria-hidden="true"><div><span>Jarlings</span><img src="assets/brand/mark-dark.svg" width="56" height="56" alt=""><span>Parcelings</span><img src="assets/brand/mark-dark.svg" width="56" height="56" alt=""><span>Leashlings</span><img src="assets/brand/mark-dark.svg" width="56" height="56" alt=""><span>Snoozlings</span><img src="assets/brand/mark-dark.svg" width="56" height="56" alt=""><span>Jarlings</span><img src="assets/brand/mark-dark.svg" width="56" height="56" alt=""><span>Parcelings</span><img src="assets/brand/mark-dark.svg" width="56" height="56" alt=""><span>Leashlings</span><img src="assets/brand/mark-dark.svg" width="56" height="56" alt=""><span>Snoozlings</span><img src="assets/brand/mark-dark.svg" width="56" height="56" alt=""></div></div>
+  <section id="games" class="stage chapter" data-station="jarlings" data-side="center" data-mside="top" data-glow="#6D3FD6" style="--accent:#B79BFF" aria-labelledby="h-jarlings">
+    <p class="ghost" aria-hidden="true">Jarlings</p>
+    <div class="inner">
+      <div class="panel">
+        <p class="no"><em>No. 1</em><span>Colour-sort puzzle</span></p>
+        <h2 id="h-jarlings">Jarlings</h2>
+        <p>Round little critters got mixed up in their jars. Tap, drop and match until every jar holds one colour.</p>
+        <ul class="facts">
+          <li>Endless levels that keep getting trickier</li>
+          <li>Mystery levels, locked jars and giant boss boards</li>
+          <li>Ten hats and four jar styles to collect</li>
+        </ul>
+        <div class="row">
+          <a class="pill magnet" href="jarlings/">Discover Jarlings<i aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h12M9 3l5 5-5 5"/></svg></i></a>
+          <span class="status">Coming soon to Google Play</span>
+        </div>
+      </div>
+      <img class="art" src="jarlings/feature.jpg" width="1024" height="500" alt="Jarlings artwork" loading="lazy">
+      <div class="shot tilt" aria-hidden="true"><img src="jarlings/shot-3.webp" width="270" height="480" alt="" loading="lazy"></div>
+    </div>
+  </section>
+  <section class="stage chapter flip" data-station="parcelings" data-side="center" data-mside="top" data-glow="#C4501F" style="--accent:#FFA47E" aria-labelledby="h-parcelings">
+    <p class="ghost" aria-hidden="true">Parcelings</p>
+    <div class="inner">
+      <div class="panel">
+        <p class="no"><em>No. 2</em><span>Fast-swipe arcade</span></p>
+        <h2 id="h-parcelings">Parcelings</h2>
+        <p>Swipe wide-eyed little parcels into the right delivery van before the conveyor belt speeds up.</p>
+        <ul class="facts">
+          <li>Quick shifts that get faster with every delivery</li>
+          <li>Gold, heavy and wrapped parcels to keep you guessing</li>
+          <li>Eight depots, each under its own sky</li>
+        </ul>
+        <div class="row">
+          <a class="pill magnet" href="parcelings/">Discover Parcelings<i aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h12M9 3l5 5-5 5"/></svg></i></a>
+          <span class="status">Coming soon to Google Play</span>
+        </div>
+      </div>
+      <img class="art" src="parcelings/feature.jpg" width="1024" height="500" alt="Parcelings artwork" loading="lazy">
+      <div class="shot tilt" aria-hidden="true"><img src="parcelings/shot-3.webp" width="270" height="480" alt="" loading="lazy"></div>
+    </div>
+  </section>
+  <section class="stage chapter" data-station="leashlings" data-side="center" data-mside="top" data-glow="#1F8F55" style="--accent:#6FE3A8" aria-labelledby="h-leashlings">
+    <p class="ghost" aria-hidden="true">Leashlings</p>
+    <div class="inner">
+      <div class="panel">
+        <p class="no"><em>No. 3</em><span>Untangle puzzle</span></p>
+        <h2 id="h-leashlings">Leashlings</h2>
+        <p>The pets went for walkies and got into a terrible tangle. Drag them around until no two leashes cross.</p>
+        <ul class="facts">
+          <li>Every level can be solved, however knotty it looks</li>
+          <li>Sleepy pets, cushions, puddles and Big Bruno the boss</li>
+          <li>Twelve hats and twelve leash styles</li>
+        </ul>
+        <div class="row">
+          <a class="pill magnet" href="leashlings/">Discover Leashlings<i aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h12M9 3l5 5-5 5"/></svg></i></a>
+          <span class="status">Coming soon to Google Play</span>
+        </div>
+      </div>
+      <img class="art" src="leashlings/feature.jpg" width="1024" height="500" alt="Leashlings artwork" loading="lazy">
+      <div class="shot tilt" aria-hidden="true"><img src="leashlings/shot-3.webp" width="270" height="480" alt="" loading="lazy"></div>
+    </div>
+  </section>
+  <section class="stage chapter flip" data-station="snoozlings" data-side="center" data-mside="top" data-glow="#33479E" style="--accent:#A9C2FF" aria-labelledby="h-snoozlings">
+    <p class="ghost" aria-hidden="true">Snoozlings</p>
+    <div class="inner">
+      <div class="panel">
+        <p class="no"><em>No. 4</em><span>Sliding-block puzzle</span></p>
+        <h2 id="h-snoozlings">Snoozlings</h2>
+        <p>Shh, the flock is fast asleep. Slide the snoring sheep aside and guide the lost lamb home.</p>
+        <ul class="facts">
+          <li>500 pens, every one proved solvable</li>
+          <li>Sheepdogs, mud, twin lambs and a big ram boss</li>
+          <li>Dye the wool, hat the lamb, paint the fence</li>
+        </ul>
+        <div class="row">
+          <a class="pill magnet" href="snoozlings/">Discover Snoozlings<i aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h12M9 3l5 5-5 5"/></svg></i></a>
+          <span class="status">Coming soon to Google Play</span>
+        </div>
+      </div>
+      <img class="art" src="snoozlings/feature.jpg" width="1024" height="500" alt="Snoozlings artwork" loading="lazy">
+      <div class="shot tilt" aria-hidden="true"><img src="snoozlings/shot-3.webp" width="270" height="480" alt="" loading="lazy"></div>
+    </div>
+  </section>
+  <section id="next" class="stage chapter teaser" data-station="next" data-side="right" data-mside="top" data-glow="#8A5A12" style="--accent:#FFBE3D" aria-labelledby="h-next">
+    <p class="ghost" aria-hidden="true">Soon</p>
+    <div class="inner">
+      <div class="panel">
+        <p class="no"><em>What's next</em></p>
+        <h2 id="h-next">Something bigger is in the other pocket.</h2>
+        <p class="lead">Alongside the small games we are working on a larger one. It stays buttoned up for now.</p>
+        <div class="row"><a class="pill magnet" href="mailto:yuraalaverdyan@gmail.com">Write to us<i aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h12M9 3l5 5-5 5"/></svg></i></a></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="inner">
+    <p class="say">Questions, bugs or a kind word? <a href="mailto:yuraalaverdyan@gmail.com">Write to us.</a></p>
+    <div>
+      <h3>Games</h3>
       <ul>
-        <li>
-          <img src="jarlings/icon.png" alt="Jarlings icon" />
-          <div>
-            <p><strong>Jarlings</strong>: sort the squishies! A 3D colour-sorting puzzle.</p>
-            <p><a href="jarlings/privacy.html">Jarlings privacy policy</a></p>
-          </div>
-        </li>
-        <li>
-          <img src="parcelings/icon.png" alt="Parcelings icon" />
-          <div>
-            <p><strong>Parcelings</strong>: swipe cute parcels into the right van before the belt speeds up.</p>
-            <p><a href="parcelings/privacy.html">Parcelings privacy policy</a></p>
-          </div>
-        </li>
-        <li>
-          <img src="leashlings/icon.png" alt="Leashlings icon" />
-          <div>
-            <p><strong>Leashlings</strong>: drag cute 3D pets until no leashes cross.</p>
-            <p><a href="leashlings/privacy.html">Leashlings privacy policy</a></p>
-          </div>
-        </li>
-        <li>
-          <img src="snoozlings/icon.png" alt="Snoozlings icon" />
-          <div>
-            <p><strong>Snoozlings</strong>: slide the sleepy sheep aside and guide the lost lamb home.</p>
-            <p><a href="snoozlings/privacy.html">Snoozlings privacy policy</a></p>
-          </div>
-        </li>
+        <li><a href="jarlings/">Jarlings</a></li>
+        <li><a href="parcelings/">Parcelings</a></li>
+        <li><a href="leashlings/">Leashlings</a></li>
+        <li><a href="snoozlings/">Snoozlings</a></li>
       </ul>
-      <p>Contact: <a href="mailto:yuraalaverdyan@gmail.com">yuraalaverdyan@gmail.com</a></p>
-    </main>
-  </body>
+    </div>
+    <div>
+      <h3>Privacy policies</h3>
+      <ul>
+        <li><a href="jarlings/privacy.html">Jarlings</a></li>
+        <li><a href="parcelings/privacy.html">Parcelings</a></li>
+        <li><a href="leashlings/privacy.html">Leashlings</a></li>
+        <li><a href="snoozlings/privacy.html">Snoozlings</a></li>
+      </ul>
+    </div>
+    <img class="word" src="assets/brand/wordmark.svg" width="551" height="112" alt="Pocket Plum" loading="lazy">
+    <p class="legal"><span>&copy; 2026 Pocket Plum Games. A small independent studio making free games for Android.</span><span>yuraalaverdyan@gmail.com</span><span>Google Play is a trademark of Google LLC.</span></p>
+  </div>
+</footer>
+</body>
 </html>
